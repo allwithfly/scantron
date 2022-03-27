@@ -65,6 +65,7 @@
 
 - name: Remove default nginx index.* files.
   shell: "rm -f {{ item }}"
+  warn: no
   with_items:
     - /var/www/html/index.*
     - /usr/share/nginx/html/index.html
