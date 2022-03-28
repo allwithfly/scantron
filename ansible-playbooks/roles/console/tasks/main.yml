@@ -5,7 +5,7 @@
 
 - name: Add postgresql APT repository.
   apt_repository:
-    repo: deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main
+    repo: deb http://apt.postgresql.org/pub/repos/apt/ {{ ubuntu_version }}-pgdg main
     filename: pgdg.list
     state: present
     update_cache: yes

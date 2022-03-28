@@ -21,6 +21,9 @@ install_packages:
 # secrets file
 scantron_secrets: "{{ lookup('file', '../../../console/scantron_secrets.json') | from_json }}"
 
+# operating system
+ubuntu_version: bionic
+
 # postgresql
 postgresql_version: 12
 
