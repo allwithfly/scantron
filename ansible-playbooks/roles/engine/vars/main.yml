@@ -7,9 +7,9 @@ install_packages:
   - curl
   - nfs-common
   - nmap
-  - python-dev
+  - python3-dev
   - python3-pip
-  - python-virtualenv
+  - python3-venv
   - screen
 
 masscan_install_packages:
@@ -19,7 +19,7 @@ masscan_install_packages:
   - make
 
 # python
-python_version: 3.6
+python_version: 3.8
 
 # Python virtual environment.
 engine_dir: /root/engine

@@ -3,6 +3,7 @@ enable_ufw_firewall: true
 reboot_box: false
 
 install_packages:
+  - acl
   - autossh
   - graphviz  # For django-extensions' graph_models.
   - libgraphviz-dev  # For django-extensions' graph_models.
@@ -12,8 +13,8 @@ install_packages:
   - postfix
   - postgresql-{{ postgresql_version }}
   - python3-pip
-  - python-dev
-  - python-virtualenv
+  - python3-dev
+  - python3-venv
   - python3-psycopg2  # python3-psycopg2 required for Ansible.
   - redis
   - xmlsec1  # SAML support.
@@ -22,7 +23,7 @@ install_packages:
 scantron_secrets: "{{ lookup('file', '../../../console/scantron_secrets.json') | from_json }}"
 
 # operating system
-ubuntu_version: bionic
+ubuntu_version: focal
 
 # postgresql
 postgresql_version: 12
@@ -38,7 +39,7 @@ postgresql_hba_entries:
   - { type: host, database: all, user: all, address: '::1/128', auth_method: md5 }
 
 # python
-python_version: 3.6
+python_version: 3.8
 
 # pip
 scantron_dir: "/home/{{ non_root_user }}/console"

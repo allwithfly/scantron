@@ -44,7 +44,7 @@ pyndiff==1.0.2
 psycopg2-binary==2.8.6
 
 # Used for django-extensions graph_models
-pygraphviz==1.6
+pygraphviz==1.7
 
 # nmap
 python-libnmap==0.7.2
