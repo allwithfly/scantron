@@ -79,7 +79,7 @@
 - name: Allow TCP 80 through firewall.
   ufw:
     rule: allow
-    port: 80
+    port: "80"
     proto: tcp
     comment: nginx
   when: enable_ufw_firewall
@@ -87,7 +87,7 @@
 - name: Allow TCP 443 through firewall.
   ufw:
     rule: allow
-    port: 443
+    port: "443"
     proto: tcp
     comment: nginx
   when: enable_ufw_firewall
@@ -437,7 +437,7 @@
 - name: Allow TCP 2049 through firewall only from localhost.
   ufw:
     rule: allow
-    port: 2049
+    port: "2049"
     proto: tcp
     from_ip: 127.0.0.1
     to_ip: 127.0.0.1
