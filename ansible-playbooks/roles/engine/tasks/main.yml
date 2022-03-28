@@ -98,7 +98,7 @@
   when: utilize_static_api_token_across_engines
 
 - name: Create "{{ venv_dir }}" virtualenv directory.
-  command: "virtualenv -p /usr/bin/python3.6 {{ venv_dir }}"
+  command: "virtualenv -p /usr/bin/python{{ python_version }} {{ venv_dir }}"
   ignore_errors: yes  # For reruns only.
 
 - name: Install pip requirements.

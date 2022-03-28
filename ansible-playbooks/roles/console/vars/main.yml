@@ -37,10 +37,13 @@ postgresql_hba_entries:
   - { type: host, database: all, user: all, address: '127.0.0.1/32', auth_method: md5 }
   - { type: host, database: all, user: all, address: '::1/128', auth_method: md5 }
 
+# python
+python_version: 3.6
+
 # pip
 scantron_dir: "/home/{{ non_root_user }}/console"
 venv_dir: "{{ scantron_dir }}/.venv"
-venv_python: "{{ venv_dir }}/bin/python3.6"
+venv_python: "{{ venv_dir }}/bin/python{{ python_version }}"
 
 # Django
 django_project_name: django_scantron

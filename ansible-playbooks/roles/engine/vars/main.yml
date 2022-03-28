@@ -18,10 +18,13 @@ masscan_install_packages:
   - libpcap-dev
   - make
 
+# python
+python_version: 3.6
+
 # Python virtual environment.
 engine_dir: /root/engine
 venv_dir: "{{ engine_dir }}/.venv"
-venv_python: "{{ venv_dir }}/bin/python3.6"
+venv_python: "{{ venv_dir }}/bin/python{{ python_version }}"
 
 # Additional nmap .nse script file URLs.  Will be saved in /usr/share/nmap/scripts/
 nse_script_urls:
