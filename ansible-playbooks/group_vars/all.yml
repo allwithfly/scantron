@@ -28,4 +28,4 @@ utilize_static_api_token_across_engines: False
 timezone_server: UTC
 
 # timezone used for the Django application's TIME_ZONE setting.  Should be your local timezone.
-timezone_django: America/Chicago
+timezone_django: Asia/Shanghai
